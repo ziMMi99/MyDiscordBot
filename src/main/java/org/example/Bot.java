@@ -12,6 +12,8 @@ public class Bot {
         jda.addEventListener(new Listeners());
         jda.addEventListener(new Sum());
 
+        //Test
+
         /*
             Global commands - can be used anywhere
             Guild commands - can be used in certain guilds
