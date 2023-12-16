@@ -14,12 +14,11 @@ public class Listeners extends ListenerAdapter {
         Guild guild = event.getJDA().getGuildById(secret.guildID);
         guild.upsertCommand("sum", "Gives a sum of 2 numbers").addOptions(
                 new OptionData(OptionType.INTEGER, "number1", "The first number", true)
-                        .setMinValue(1)
-                        .setMaxValue(100),
+                        .setMinValue(Integer.MIN_VALUE)
+                        .setMaxValue(Integer.MAX_VALUE),
                 new OptionData(OptionType.INTEGER, "number2", "The second number", true)
-                        .setMinValue(1)
-                        .setMaxValue(100)
+                        .setMinValue(Integer.MIN_VALUE)
+                        .setMaxValue(Integer.MAX_VALUE)
                 ).queue();
     }
-
 }
